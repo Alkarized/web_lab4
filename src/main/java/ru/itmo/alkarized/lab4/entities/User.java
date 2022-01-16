@@ -18,8 +18,14 @@ public class User implements UserDetails {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY) @Getter @Setter
     private Long id;
 
+    @Setter
     private String username;
+    @Setter
     private String password;
+
+    @OneToMany(mappedBy = "userOwner", fetch = FetchType.EAGER, orphanRemoval = true)
+    @Getter @Setter
+    private Set<Point> points;
 
     public User() {
     }

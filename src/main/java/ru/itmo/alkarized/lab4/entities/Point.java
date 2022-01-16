@@ -21,7 +21,7 @@ public class Point implements Serializable {
 
     @ManyToOne(fetch = FetchType.EAGER, targetEntity = User.class)
     @JoinColumn(name = "id_user")
-    private User user;
+    private User userOwner;
 
     public void setResult(){
         if((x >=0 && y >= 0 && y <= r && x <= r/2) ||
@@ -29,17 +29,6 @@ public class Point implements Serializable {
                 (x<=0 && y >=0 && y<= (double)r/2 + x)){
             result = "hit";
         } else result = "non-hit";
-    }
-
-    @Override
-    public String toString(){
-        JSONObject jsonObject = new JSONObject();
-        return jsonObject
-                .put("x", x)
-                .put("y", y)
-                .put("r", r)
-                .put("result", result)
-                .put("id", id).toString();
     }
 
     public Point() {
