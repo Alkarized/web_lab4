@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication(scanBasePackages = {"ru.itmo.alkarized.lab4.configurations", "ru.itmo.alkarized.lab4.controllers",
-        "ru.itmo.alkarized.lab4.entities", "ru.itmo.alkarized.lab4.services"})
+        "ru.itmo.alkarized.lab4.entities", "ru.itmo.alkarized.lab4.services", "ru.itmo.alkarized.lab4.repositories"})
 public class Lab4Application {
     
     public static void main(String[] args) {
