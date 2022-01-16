@@ -78,27 +78,27 @@ public class UserController {
 
     @GetMapping(value = "/login")
     public ResponseEntity<String> loginPage(){
-        return new ResponseEntity<String>("login", HttpStatus.OK);
+        return new ResponseEntity<>("login", HttpStatus.OK);
     }
 
     @GetMapping(value = "/registration")
     public ResponseEntity<String> registerPage(){
-        return new ResponseEntity<String>("registration", HttpStatus.OK);
+        return new ResponseEntity<>("registration", HttpStatus.OK);
     }
 
     @GetMapping(value = "/logout")
     public ResponseEntity<String> logoutPage(){
-        return new ResponseEntity<String>("logout", HttpStatus.OK);
+        return new ResponseEntity<>("logout", HttpStatus.OK);
     }
 
     @GetMapping(value = "/")
     public ResponseEntity<String> mainPage(){
-        return new ResponseEntity<String>("redirect:/login", HttpStatus.OK);
+        return new ResponseEntity<>("redirect:/login", HttpStatus.OK);
     }
 
     @GetMapping(value = "/error")
     public ResponseEntity<String> errorPage(){
-        return new ResponseEntity<String>("error has occured", HttpStatus.OK);
+        return new ResponseEntity<>("error has occured", HttpStatus.OK);
     }
 
 }
